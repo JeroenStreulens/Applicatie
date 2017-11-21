@@ -9,9 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Home page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Welkom!</h1>
+        <form action=<c:url value="ctrl.do" /> method="post" >
+           Klik op onderstaande knop om u aan te melden. 
+           <input type="submit" value="Aanmelden" />
+           <input type="hidden" name="komvan" value="ïndex" />
+        </form>
     </body>
 </html>
