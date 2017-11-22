@@ -16,8 +16,8 @@ drop table AP_Student;
 
 create table AP_Student(
         snr             integer not null,
-        snaam           varchar2(30) not null,
-        spwoord         varchar2(30) not null,
+        snaam           varchar(30) not null,
+        spwoord         varchar(30) not null,
         bevestigd       char,
 	primary key(snr)
 );
@@ -25,8 +25,8 @@ create table AP_Student(
 
 create table AP_Docent(
 	dnr             integer not null,
-        dnaam           varchar2(30) not null,
-        dpwoord         varchar2(30) not null,
+        dnaam           varchar(30) not null,
+        dpwoord         varchar(30) not null,
 	primary key(dnr)
 );
 
