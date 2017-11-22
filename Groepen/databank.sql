@@ -4,35 +4,33 @@
  * and open the template in the editor.
  */
 /**
- * Author:  Wouter Mauriën & Jeroen Streulens
+ * Author:  Wouter MauriÃ«n & Jeroen Streulens
  * Created: 21-nov-2017
  */
 
 
 drop table AP_Groepen;
 drop table AP_Voorkeur;
-drop table AP_Docent;
-drop table AP_Student;
+drop table AP_Rollen;
+drop table AP_Users;
 
-create table AP_Student(
-        snr             integer not null,
-        snaam           varchar(30) not null,
-        spwoord         varchar(30) not null,
+create table AP_Users(
+        unr             integer not null,
+        suaam           varchar(30) not null,
+        upwoord         varchar(30) not null,
         bevestigd       char,
-	primary key(snr)
+	primary key(unr)
 );
 
-
-create table AP_Docent(
-	dnr             integer not null,
-        dnaam           varchar(30) not null,
-        dpwoord         varchar(30) not null,
-	primary key(dnr)
+create table AP_Rollen(
+        rol             varchar(20),
+        rnr             int references AP_Users(unr),
+        primary key(rnr)
 );
 
 create table AP_Voorkeur(
-	vsnr             int references AP_Student(snr),
-	osnr             int references AP_Student(snr),
+	vsnr             int references AP_Users(unr),
+	osnr             int references AP_Users(unr),
         voorkeur         char,
         primary key(vsnr,osnr)
         
@@ -40,13 +38,13 @@ create table AP_Voorkeur(
 
 create table AP_Groepen(
 	gnr             integer not null,
-        gsnr            int references AP_Student(snr),
-        primary key(gnr)
+        gsnr            int references AP_Users(unr),
+        primary key(gnr, gsnr)
 );
 
 
-insert into AP_Student VALUES(0,'Wouter Mauriën', 'qwerty', 'n');
-insert into AP_Student VALUES(1,'Jeroen Streulens', 'azerty', 'n');
-insert into AP_Student VALUES(2, 'Mathias Wens', 'ikkomuitdekast', 'n');
-insert into AP_Docent VALUES (0,'Den Herman','unix');
-insert into AP_Docent VALUES (1,'Dessie','sponzenridder');
+insert into AP_Users VALUES(0,'Wouter MauriÃ«n', 'qwerty', 'n');
+insert into AP_Users VALUES(1,'Jeroen Streulens', 'azerty', 'n');
+insert into AP_Users VALUES(2, 'Mathias Wens', 'ikkomuitdekast', 'n');
+insert into AP_Users VALUES (3,'Den Herman','unix', null);
+insert into AP_Users VALUES (4,'Dessie','sponzenridder', null);
