@@ -13,5 +13,10 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        <form method="post" action="c:url value='ctrl.do' />">
+            Hieronder vindt u een overzicht van de door u gemaakte keuzes:
+            <input type="submit" value="studoverzicht" />
+            <input type="hidden" name="komvan" value='studoverzicht'>
+        </form>>
     </body>
 </html>
