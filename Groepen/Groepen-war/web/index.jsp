@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,7 +17,7 @@
         <form action=<c:url value="ctrl.do" /> method="post" >
            Klik op onderstaande knop om u aan te melden. 
            <input type="submit" value="Aanmelden" />
-           <input type="hidden" name="komvan" value="ïndex" />
+           <input type="hidden" name="komvan" value="index" />
         </form>
     </body>
 </html>

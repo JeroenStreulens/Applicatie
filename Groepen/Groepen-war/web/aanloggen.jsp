@@ -21,7 +21,8 @@
                 <tr> <td> Naam: </td> <td> <input type="text" name="j_username" /></td></tr>
                 <tr> <td> Paswoord:</td><td><input type="password" name="j_password" /></td></tr>
             </table>
-            <input type="submit" />
+            <input type="submit" value="Aanmelden"/>
+            <input type="hidden" name="komvan" value="login" />
         </form>
     </body>
 </html>

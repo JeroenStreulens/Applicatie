@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 /**
- * Author:  Wouter Mauriën & Jeroen Streulens
+ * Author:  Wouter MauriÃ«n & Jeroen Streulens
  * Created: 21-nov-2017
  */
 
@@ -13,7 +13,6 @@ drop table AP_Groepen;
 drop table AP_Voorkeur;
 drop table AP_Rollen;
 drop table AP_Users;
-
 
 create table AP_Users(
         unr             integer not null,
@@ -27,7 +26,6 @@ create table AP_Rollen(
         rol             varchar(20),
         rnr             int references AP_Users(unr),
         primary key(rnr)
-        
 );
 
 create table AP_Voorkeur(
@@ -45,7 +43,7 @@ create table AP_Groepen(
 );
 
 
-insert into AP_Users VALUES(0,'Wouter Mauriën', 'qwerty', 'n');
+insert into AP_Users VALUES(0,'Wouter MauriÃ«n', 'qwerty', 'n');
 insert into AP_Users VALUES(1,'Jeroen Streulens', 'azerty', 'n');
 insert into AP_Users VALUES(2, 'Mathias Wens', 'ikkomuitdekast', 'n');
 insert into AP_Users VALUES (3,'Den Herman','unix', null);
